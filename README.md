@@ -8,7 +8,7 @@ Markov models
 
 Convolutional Neural Networks
 
-Reccurent Neural Networks ( BIDIRECTIONAL LSTM)
+Reccurent Neural Networks ( Bidirectional LSTM)
 
 Connectionist Temporal Classification
 
