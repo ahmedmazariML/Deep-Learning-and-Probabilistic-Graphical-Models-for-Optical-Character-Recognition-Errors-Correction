@@ -10,7 +10,7 @@ import abbyextractor_helper as tools
 from word import WordFeature
 import numpy as np
 #XML_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)," "))
-DATA_DIR = "/home/ahmed/Downloads/BOUYGUES_XML/BOUYGUES_XML_0/"
+DATA_DIR = "/home/ahmed/Downloads/"
 FILENAME= "1841729699"
 FILE = DATA_DIR + FILENAME + "_0001.xml.gz"
 file_index=FILENAME+"_001"
@@ -47,26 +47,10 @@ class AbbyExtractor:
 
 
         df2 =  pd.DataFrame({'page_number':file_index,'positionlrtb': position_char, 'words': wrds_blcks})
-        #temp_df.append(df2)
-        ##with open('/home/ahmed/internship/cnn_ocr/xml1.csv', 'a') as f:
-         #   rows.to_csv(f, header=False)
-          #  for row in rows:
-           #     df.loc[len(df)] = row
-        #df2.to_csv('/home/ahmed/internship/cnn_ocr/try.csv', mode='a', header=False)
-        with open('/home/ahmed/internship/cnn_ocr/scale_train/abby_positions.csv', 'a') as f:
-            df2.to_csv(f, header=False)
-       # with open('/home/ahmed/internship/cnn_ocr/xml1.csv', 'a') as f:
-        #    df2.to_csv(f, mode='a', header=False)
-        #frames = [temp_df, df2]
-        #temp_df=pd.concat(frames)
-        #temp_df.to_csv('/home/ahmed/internship/cnn_ocr/xml1.csv',mode ='a', header= False)
-       # with open('/home/ahmed/internship/cnn_ocr/xml1.csv', 'a') as f:
-        #    (rows).to_csv(f, header=False)
-        #fields = pd.DataFrame({'position :  l, r, t, b, area, perimeter': position_char, 'words': wrds_blcks})
-        #temp_df = pd.DataFrame({'position :  l, r, t, b, area, perimeter': position_char,'words': wrds_blcks})
-        #temp_df.to_csv('/home/ahmed/internship/cnn_ocr/xml.csv')
 
-        #x= temp_df.count()+1
+        with open('/home/ahmed/internship/cnn_ocr/scale_train/positions.csv', 'a') as f:
+            df2.to_csv(f, header=False)
+ 
         return wrds_blcks, position_char
 
 
