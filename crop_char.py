@@ -191,57 +191,7 @@ for name in set_csv:
                 coords[9].item()) + "_in_csv_" + str(j) + ".png",
             img_charac_switched)
 
-         ''''
-        img1 = img_charac.reshape((-1, 1))
-        img1 = img1.T
-        img1 = img1.flatten()
-        img1_label = charac
-
-        img2 = img_charac_switched.reshape((-1, 1))
-        img2 = img2.T
-        img2 = img2.flatten()
-        img2_label = charac
-
-        images.append(img1)
-        images.append(img2)
-        # dataset
-        img1_name = str(charac) + "_" + str(i) + "_" + str(img_charac.shape + "_" + str(page_ref)) + ".png"
-        img2_name = str(charac) + "_switched" + "_" + str(i) + "_" + str(img_charac_switched.shape) + str(
-            page_ref) + ".png"
-        images_names.append(img1_name)
-        images_names.append(img2_name)
-        '''
-        ''''
-        cv2.imwrite(
-            path_dataset + charac + "switched_char_" + str(i) + "_" + str(img_charac.shape) + "_" + str(page_ref) + "_"
-            + str(coords[6].item()) + "_" + str(coords[7].item()) + "_" + str(coords[8].item()) + "_" + str(
-                coords[9].item()) + "_in_csv_" + str(j) + ".png",
-            img_charac_switched)
-        cv2.imwrite(
-            path_dataset + charac + + "_char_" + str(i) + "_" + str(img_charac.shape) + "_" + str(page_ref) + "_"
-            + str(coords[6].item()) + "_" + str(coords[7].item()) + "_" + str(coords[8].item()) + "_" + str(
-                coords[9].item()) + "_in_csv_" + str(j) + ".png",
-            img_charac)
-        '''
-        '''
-        w_img_charac,h_img_charac = img_charac.shape[0:2]
-        HEIGHT.append(h_img_charac)
-        WIDTH.append(w_img_charac)
-        '''
-
-        # cv2.imwrite(path_dataset+ str(charac) + "_switche
-        # d" + "_" + str(i) + "_" + str(img_charac_switched.shape) +"_"+str(page_ref)+ ".png",img_charac_switched)
-        # cv2.imwrite(path_dataset + str(charac) + "_" + str(i) + "_" + str(img_charac_resized.shape) +"_"+str(page_ref)+ ".png",  img_charac_resized)
-
-
-        # images = [img1,img2]
-        # img_arr = np.stack([img_arr,img1,img2], axis=0)
-        # img_arr = np.stack(img2, axis=0)
-        # data.append(img1)
-        # data.append(img2)
-
-        # print (img_arr.shape)
-
+     
 
 
     print(i)
