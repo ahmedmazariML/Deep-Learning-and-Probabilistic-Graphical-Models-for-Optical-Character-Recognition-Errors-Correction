@@ -108,9 +108,9 @@ data_train_wth_duplicated['occurence'] = data_train_wth_duplicated.error.apply(l
 data_train_wth_duplicated['occurence2'] = data_train_wth_duplicated.error.apply(lambda x: x.get(x.keys()[0])[3])
 threshold_proba = 0.05
 threshold_n = 10
-data_train_wth_duplicated.to_csv('/home/faris/Desktop/data_train_wth_duplicated.csv')
+data_train_wth_duplicated.to_csv('/home/Desktop/data_train_wth_duplicated.csv')
 data_write = data_train_wth_duplicated[(data_train_wth_duplicated['diff_proba'] > threshold_proba) & (data_train_wth_duplicated['occurence2'] < threshold_n)]
-data_write.to_csv('/home/faris/Desktop/data_write.csv')
+data_write.to_csv('/home/Desktop/data_write.csv')
 
 # Write into DB
 con = connect.make_connection()
